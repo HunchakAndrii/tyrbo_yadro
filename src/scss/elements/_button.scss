@@ -1,3 +1,23 @@
+.sign-in-btn {
+  padding: 12px 20px;
+  border: 1px solid #000;
+  border-radius: 30px;
+}
+
+.mobile-sign-in-btn {
+  padding: 12px 50px;
+  border-radius: 30px;
+  border: 1px solid $orange;
+  color: $orange;
+}
+
+.mobile__reg-btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid #000;
+}
+
+// ............................вверху мои кнопки проекта....................//
 .btn {
   padding: 6px 12px;
   font-size: 16px;

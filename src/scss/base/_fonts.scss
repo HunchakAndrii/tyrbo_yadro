@@ -1,36 +1,61 @@
 // Inlcude fonts
-@include font-face('Circe', 'Circe-Regular', 400);
-@include font-face('Circe', 'Circe-Bold', 700);
+@include font-face('Inter', 'Circe-Regular', 400);
+@include font-face('Ubuntu', 'Ubuntu-Medium', 500);
+@include font-face('Ubuntu', 'Ubuntu-Bold', 700);
 
 // Main Fonts
 .title-h1 {
-  font-size: 30px;
+  font-size: 32px;
   line-height: 1.2;
+  font-family: Ubuntu;
+  font-weight: 700;
 
   @media (min-width: 1200px) {
-    font-size: 48px;
+    font-size: 60px;
   }
 }
 
 .title-h2 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.2;
+  font-family: Ubuntu;
+  font-weight: 700;
 
   @media (min-width: 1200px) {
-    font-size: 32px;
+    font-size: 46px;
   }
 }
 
 .title-h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
+  font-family: Ubuntu;
+  font-weight: 700;
 
   @media (min-width: 1200px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
 .text-p1 {
   font-size: 16px;
   line-height: 1.5;
+  font-family: Inter;
+  font-weight: 400;
+  color: $grey;
+
+  @media (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.text-p2 {
+  font-size: 14;
+  font-family: Ubuntu;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+span {
+  color: $orange;
 }
