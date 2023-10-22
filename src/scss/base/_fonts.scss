@@ -44,7 +44,7 @@
   font-weight: 400;
   color: $grey;
 
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 14px;
   }
 }

@@ -5,10 +5,14 @@ if(burger) {
   burger.addEventListener('click', e => {
     e.preventDefault()
 
+
     burger.classList.toggle('active')
     mobileMenu.classList.toggle('active')
+
   })
 }
+
+
 
 
 // document.querySelector('.burger').addEventListener('click', function() {
@@ -21,3 +25,5 @@ if(burger) {
 //     mobileMenu.style.display = 'none'
 //   }
 // });
+
+

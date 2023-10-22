@@ -1,10 +1,98 @@
-{% extends "main.njk" %}
+{% extends "main.njk" %} {% block content %}
 
-{% block content %}
-
-<section>
+<section class="first-section">
   <div class="container">
-    <h1>Index page</h1>
+    <div class="first-section__wrap">
+      <div class="first-section__content">
+        <h1 class="title-h1 first-section__title">
+          Готовая семантика за 1 минуту
+        </h1>
+        <p class="first-section__text">
+          Сервис <span>автоматического</span> сбора очищенных запросов для любой
+          страницы сайта
+        </p>
+        <div class="flex-row">
+          <button class="orange-btn first-section__btn">Попробовать</button>
+          <p class="text-p1 first-section__sub-text">
+            При регистрации 500 руб., хватит чтобы влюбиться
+          </p>
+        </div>
+      </div>
+
+      <div class="first-section__image">
+        <img
+          class="first-section__img"
+          src="/img/first-section-img.svg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="first-section__list">
+      <div class="list__item">
+        <img class="list__img" src="/img/list-img1.svg" alt="" />
+        <h3 class="title-h3 list__title">Избавит от рутины</h3>
+        <p class="text-p1 list__text">Долой чистку, парсинг, группировку</p>
+      </div>
+      <div class="list__item">
+        <img class="list__img" src="/img/list-img2.svg" alt="" />
+        <h3 class="title-h3 list__title">Легко разобраться</h3>
+        <p class="text-p1 list__text">Всего 2 кнопки</p>
+      </div>
+      <div class="list__item">
+        <img class="list__img" src="/img/list-img3.svg" alt="" />
+        <h3 class="title-h3 list__title">Больше заработаешь</h3>
+        <p class="text-p1 list__text">
+          Высвободится много времени на новых клиентов
+        </p>
+      </div>
+      <div class="list__item">
+        <img class="list__img" src="/img/list-img4.svg" alt="" />
+        <h3 class="title-h3 list__title">Экономия времени</h3>
+        <p class="text-p1 list__text">
+          Не надо обучать сотрудников сбору семантики и сложным действиям
+        </p>
+      </div>
+      <div class="list__item">
+        <img class="list__img" src="/img/list-img5.svg" alt="" />
+        <h3 class="title-h3 list__title">Отсутствие ошибок</h3>
+        <p class="text-p1 list__text">
+          Человеческий фактор и лень никто не отменял, влияющие на полноту
+          их сбора
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="second-section">
+  <div class="container">
+    <h2 class="title-h2 second-section__title">
+      Ноу-Хау в Кластеризаторе по Топ-у
+    </h2>
+    <div class="second-section__wrap">
+      <div class="second-section__content">
+        <div class="second-section__block">
+          <h3 class="title-h3 second-section__sub-title sub-title__1">Отличительные особенности</h3>
+          <p class="text-p1 second-section__text">На основе лучших страниц конкурентов по видимости</p>
+        </div>
+        <div class="second-section__block">
+          <h3 class="title-h3 second-section__sub-title sub-title__2">Простая логика</h3>
+          <p class="text-p1 second-section__text">Если они смогли быть в ТОП по этим запросам, значит и вы сможете</p>
+        </div>
+        <div class="second-section__block">
+          <h3 class="title-h3 second-section__sub-title sub-title__3">Превосходство метода</h3>
+          <ol class="text-p1 second-section__text">
+            <li>Запросы которые реально посадить на страницу</li>
+            <li>Не нужно думать над объединять или разделять по запросам со слабыми связями</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="second-section__image">
+        <img class="second-section__img" src="/img/second-section.svg" alt="" />
+      </div>
+    </div>
   </div>
 </section>
 

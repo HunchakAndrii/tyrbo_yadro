@@ -103,14 +103,14 @@
   padding: 0px 20px;
   z-index: 1;
   background-color: $white;
-  display: none;
-  transition: opacity 0.3s;
+  // display: none;
+  transition: opacity 0.3s ease;
   opacity: 0;
   overflow: hidden;
 }
 
 .mobile-menu.active {
-  display: block;
+  // display: block;
   opacity: 1;
 }
 

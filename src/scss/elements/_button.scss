@@ -17,6 +17,16 @@
   border: 1px solid #000;
 }
 
+.orange-btn {
+  padding: 22px 56px;
+  color: $white;
+  background-color: $orange;
+  text-transform: uppercase;
+  border-radius: 30px;
+  font-family: Ubuntu;
+  font-weight: 700;
+}
+
 // ............................вверху мои кнопки проекта....................//
 .btn {
   padding: 6px 12px;
