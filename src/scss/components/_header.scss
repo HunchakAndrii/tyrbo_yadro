@@ -107,11 +107,13 @@
   transition: opacity 0.3s ease;
   opacity: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .mobile-menu.active {
   // display: block;
   opacity: 1;
+  pointer-events: all;
 }
 
 .block__one {

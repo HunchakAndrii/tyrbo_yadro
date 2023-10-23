@@ -8,11 +8,8 @@ if(burger) {
 
     burger.classList.toggle('active')
     mobileMenu.classList.toggle('active')
-
   })
 }
-
-
 
 
 // document.querySelector('.burger').addEventListener('click', function() {
