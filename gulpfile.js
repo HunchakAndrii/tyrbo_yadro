@@ -1,7 +1,6 @@
 import gulp from 'gulp'
 import gulpSass from 'gulp-sass'
 import nodeSass from 'sass'
-import pug from 'gulp-pug'
 import nunjucksRender from 'gulp-nunjucks-render'
 import webpack from 'webpack-stream'
 import browsersync from 'browser-sync'
@@ -33,9 +32,11 @@ const browserSync = () => {
 const html = () => {
   return gulp
     .src('./src/njk/**/*.njk')
-    .pipe(nunjucksRender({
-      path: ['src/njk/layout/', 'src/njk/components/']
-    }))
+    .pipe(
+      nunjucksRender({
+        path: ['src/njk/layout/', 'src/njk/components/'],
+      })
+    )
     .pipe(gulp.dest('./dist'))
     .pipe(browsersync.stream())
 }
@@ -49,20 +50,18 @@ const style = () => {
 }
 
 const script = () => {
-  return (
-    gulp
-      .src('./src/js/main.js')
-      .pipe(
-        webpack({
-          mode: 'development',
-          output: {
-            filename: 'main.js',
-          },
-        })
-      )
-      .pipe(gulp.dest('./dist'))
-      .pipe(browsersync.stream())
-  )
+  return gulp
+    .src('./src/js/main.js')
+    .pipe(
+      webpack({
+        mode: 'development',
+        output: {
+          filename: 'main.js',
+        },
+      })
+    )
+    .pipe(gulp.dest('./dist'))
+    .pipe(browsersync.stream())
 }
 
 const image = () => {
@@ -77,7 +76,17 @@ const resource = () => {
   return gulp.src('./src/resource/**/*').pipe(gulp.dest('./dist/'))
 }
 
-export { html, style, script, image, font, browserSync }
+const build = (done) => {
+  html()
+  style()
+  script()
+  image()
+  font()
+  resource()
+  done()
+}
+
+export { html, style, script, image, font, browserSync, build }
 
 export default () => {
   html()
