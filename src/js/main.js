@@ -1,6 +1,7 @@
 const burger = document.querySelector('.burger')
 const mobileMenu = document.querySelector('.mobile-menu')
 
+
 if(burger) {
   burger.addEventListener('click', e => {
     e.preventDefault()
@@ -8,8 +9,47 @@ if(burger) {
 
     burger.classList.toggle('active')
     mobileMenu.classList.toggle('active')
+
   })
 }
+
+
+const popup = document.querySelector('.popup')
+const openPopup = document.querySelector('#open-popup')
+const openPopupMobile = document.querySelector('#open-popup-mobile')
+const btnClose = document.querySelector('.btn-close')
+
+
+if (openPopup && popup) {
+  openPopup.addEventListener('click', e => {
+    e.preventDefault()
+
+    popup.classList.toggle('show')
+    console.log(popup)
+  })
+}
+
+if (openPopupMobile && popup) {
+  openPopupMobile.addEventListener('click', e => {
+    e.preventDefault()
+
+    popup.classList.toggle('show')
+    console.log(popup)
+  })
+}
+
+if (btnClose && popup) {
+  btnClose.addEventListener('click', e => {
+    e.preventDefault()
+
+    popup.classList.toggle('show')
+    console.log(popup)
+  })
+}
+
+
+
+
 
 
 // document.querySelector('.burger').addEventListener('click', function() {

@@ -76,7 +76,7 @@ const resource = () => {
   return gulp.src('./src/resource/**/*').pipe(gulp.dest('./dist/'))
 }
 
-const build = (done) => {
+const build = done => {
   html()
   style()
   script()
