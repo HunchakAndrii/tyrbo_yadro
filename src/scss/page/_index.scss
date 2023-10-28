@@ -221,6 +221,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 45px;
 
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -233,8 +237,9 @@
   grid-row: 1 / 4;
   gap: 1px;
 
-  @media (max-width: 640px) {
-    grid-template-rows: subgrid;
+  @media (max-width: 991px) {
+    grid-template-rows: auto;
+    grid-row: auto;
     grid-template-columns: 1fr;
     gap: 1px;
   }
@@ -264,25 +269,20 @@
 .video-image {
   position: relative;
   overflow: hidden;
-  max-width: 400px;
   border-radius: 15px;
+  outline: 1px dashed transparent;
+  outline-offset: 4px;
+  transition: 1s outline-color ease;
+
+  &:hover {
+    outline-color: $orange;
+  }
 }
 
 .video-img {
-  width: 400px;
-  height: 220px;
+  display: block;
+  width: 100%;
   transition: transform 0.3s ease;
-  // &:hover {
-  //   transform: scale(1.2);
-  // }
-
-  @media (max-width: 920px) {
-    height: 160px;
-  }
-
-  @media (max-width: 720px) {
-    height: 130px;
-  }
 }
 
 .play-icon {
@@ -297,14 +297,12 @@
 
 .video-image:hover .video-img {
   transform: scale(1.1);
-  border: 1px dashed transparent;
-  border-color: $orange;
-  border-style: dashed;
 }
 
 //........................pricres......................//
 
 .prices {
+  padding: 0 0 50px;
 }
 
 .prices__title {
@@ -313,36 +311,71 @@
 .prices__wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
   gap: 100px;
+
+  @media (max-width: 800px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 675px) {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
 }
+
 .prices__left-block {
-  padding: 20px 25px;
-  height: 200px;
   border-radius: 15px;
   border: 1px dashed #e2e3ef;
+}
+
+.prices__left-block__head,
+.prices__left-block__item {
   display: grid;
   grid-template-columns: 60% 40%;
-  grid-template-rows: repeat(3, minmax(56px, 64px));
+  padding: 20px 15px;
+  margin: 0 10px;
+}
+
+.prices__left-block__item {
+  border-top: 1px dashed #e2e3ef;
 }
 
 .prices__right-block {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
+
+  @media (max-width: 675px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .prices__right-sub-block {
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 10px;
+
+  @media (max-width: 675px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+    place-items: center;
+  }
 }
 
 .sub-title {
   margin-bottom: 10px;
 }
+
 .prices__image {
   width: 100px;
   height: 100px;
+
+  @media (max-width: 675px) {
+
+  }
 }
 
 .prices__img {
