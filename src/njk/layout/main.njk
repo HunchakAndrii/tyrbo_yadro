@@ -1,20 +1,28 @@
-{% set title = 'Home' %}
-{% block head %}{% endblock head %}
+{% set title = 'Home' %} {% block head %}{% endblock head %}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="./main.css">
-</head>
-<body>
-  {% include "../components/header.njk" %}
-  {% block content %}{% endblock %}
-  {% include "../components/footer.njk" %}
-  {% include "../components/register.njk" %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-  <script src="./main.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./hello.js"></script>
+  </head>
+  <body>
+    {% include "../components/header.njk" %} {% block content %}{% endblock %}
+    {% include "../components/footer.njk" %} {% include
+    "../components/register.njk" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./hello.js"></script>
+  </body>
 </html>
+
+
+ {# требует внимание подключение скриптов !!!!!  #}

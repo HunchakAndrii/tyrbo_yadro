@@ -204,6 +204,7 @@
 //....................third secrion.......................//
 
 .third-section {
+  margin-bottom: 130px;
 }
 
 .third-section__title {
@@ -303,6 +304,7 @@
 
 .prices {
   padding: 0 0 50px;
+  margin-bottom: 130px;
 }
 
 .prices__title {
@@ -374,9 +376,87 @@
   height: 100px;
 
   @media (max-width: 675px) {
-
   }
 }
 
-.prices__img {
+//.....................reviews.....................//
+
+.reviews {
+  margin-bottom: 130px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+//....................accordion....................//
+
+.accordion {
+  margin-bottom: 130px;
+}
+
+.accordion__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.accordion-block {
+}
+
+.accordion__item {
+  margin-bottom: 50px;
+}
+
+.accordion__item:last-child {
+  margin-bottom: 0px;
+}
+
+.accordion__item__title {
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: #A0A2B4;
+    position: absolute;
+    top: 5px;
+  }
+}
+
+.accordion__item__title::before {
+  transform: rotate(40deg);
+  right: 0px;
+}
+
+.accordion__item__title::after {
+  transform: rotate(-40deg);
+  right: 7px;
+}
+
+.accordion__item__text {
+  display: none;
+  padding-bottom: 20px;
 }
