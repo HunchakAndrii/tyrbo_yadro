@@ -218,21 +218,58 @@
 
 <section class="reviews">
   <div class="container">
-    <h2 class="title-h2 reviews__title">Отзывы</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper__wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
+    <div class="review-row">
+      <h2 class="title-h2 reviews__title">Отзывы</h2>
+      <div class="review-count">
+        <button class="swiper-button-prev"></button>
+        <p class="reviews__counter">1/4</p>
+        <button class="swiper-button-next"></button>
       </div>
+    </div>
+
+    <div class="swiper my-Swiper">
+      <div class="swiper-wrapper">
+        {% for i in [1, 2, 3, 4] %}
+          <div class="swiper-slide">
+            <div class="review__img-block">
+              <div class="review__image">
+                <img class="review__img" src="img/slider1.png" alt="" />
+              </div>
+              <p class="review__name">Кирилл</p>
+              <p class="text-p1 review__proff">SEO специалист</p>
+            </div>
+            <div class="swiper__text-block">
+              <h2 class="title-h3 review__sub-title">Лучший сервис!!!</h2>
+              <p class="text-p1 review__text">
+                Задача организации, в особенности же дальнейшее развитие различных
+                форм деятельности в значительной степени обуславливает создание
+                системы обучения кадров, соответствует насущным потребностям.
+                Повседневная практика показывает, что укрепление и развитие!!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review__img-block">
+              <div class="review__image">
+                <img class="review__img" src="img/slider2.png" alt="" />
+              </div>
+              <p class="review__name">Иван</p>
+              <p class="text-p1 review__proff">SEO студия “Альтернатива”</p>
+            </div>
+            <div class="swiper__text-block">
+              <h2 class="title-h3 review__sub-title">
+                Значимость этих проблем настолько очевидна :)
+              </h2>
+              <p class="text-p1 review__text">
+                Таким образом рамки и место обучения кадров играет важную роль в
+                формировании соответствующий условий активизации.
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
   </div>
 </section>
@@ -242,24 +279,55 @@
     <h2 class="title-h2 accordion__title">Популярные вопросы</h2>
     <div class="accordion-block">
       <div class="accordion__item">
-        <div class="title-h3 accordion__item__title">Насколько полной получается семантика?</div>
-        <div class="text-p1 accordion__item__text">Используется сразу несоклько платных, обновляемых баз, общей суммой 150 миллионов запросов. Сегодня практически не осталось ниш в которых не проработана seo-специалистами семантика. Вероятность найти новые ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую семантику конкурентов.</div>
+        <div class="title-h3 accordion__item__title">
+          Насколько полной получается семантика?
+        </div>
+        <div class="text-p1 accordion__item__text">
+          Используется сразу несоклько платных, обновляемых баз, общей суммой
+          150 миллионов запросов. Сегодня практически не осталось ниш в которых
+          не проработана seo-специалистами семантика. Вероятность найти новые
+          ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую
+          семантику конкурентов.
+        </div>
       </div>
       <div class="accordion__item">
-        <div class="title-h3 accordion__item__title">Почему не нужно чистить запросы?</div>
-        <div class="text-p1 accordion__item__text">Используется сразу несоклько платных, обновляемых баз, общей суммой 150 миллионов запросов. Сегодня практически не осталось ниш в которых не проработана seo-специалистами семантика. Вероятность найти новые ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую семантику конкурентов.</div>
+        <div class="title-h3 accordion__item__title">
+          Почему не нужно чистить запросы?
+        </div>
+        <div class="text-p1 accordion__item__text">
+          Используется сразу несоклько платных, обновляемых баз, общей суммой
+          150 миллионов запросов. Сегодня практически не осталось ниш в которых
+          не проработана seo-специалистами семантика. Вероятность найти новые
+          ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую
+          семантику конкурентов.
+        </div>
       </div>
       <div class="accordion__item">
-        <div class="title-h3 accordion__item__title">Возможна ли оплата для юридических лиц?</div>
-        <div class="text-p1 accordion__item__text">Используется сразу несоклько платных, обновляемых баз, общей суммой 150 миллионов запросов. Сегодня практически не осталось ниш в которых не проработана seo-специалистами семантика. Вероятность найти новые ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую семантику конкурентов.</div>
+        <div class="title-h3 accordion__item__title">
+          Возможна ли оплата для юридических лиц?
+        </div>
+        <div class="text-p1 accordion__item__text">
+          Используется сразу несоклько платных, обновляемых баз, общей суммой
+          150 миллионов запросов. Сегодня практически не осталось ниш в которых
+          не проработана seo-специалистами семантика. Вероятность найти новые
+          ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую
+          семантику конкурентов.
+        </div>
       </div>
       <div class="accordion__item">
-        <div class="title-h3 accordion__item__title">Почему класстеризатор не распределяет сразу по нескольким страницам?</div>
-        <div class="text-p1 accordion__item__text">Используется сразу несоклько платных, обновляемых баз, общей суммой 150 миллионов запросов. Сегодня практически не осталось ниш в которых не проработана seo-специалистами семантика. Вероятность найти новые ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую семантику конкурентов.</div>
+        <div class="title-h3 accordion__item__title">
+          Почему класстеризатор не распределяет сразу по нескольким страницам?
+        </div>
+        <div class="text-p1 accordion__item__text">
+          Используется сразу несоклько платных, обновляемых баз, общей суммой
+          150 миллионов запросов. Сегодня практически не осталось ниш в которых
+          не проработана seo-специалистами семантика. Вероятность найти новые
+          ключи, крайне низкая. Поэтому, гораздо эффективнее взять готовую
+          семантику конкурентов.
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 
 {% endblock %}

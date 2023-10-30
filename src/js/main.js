@@ -1,4 +1,4 @@
-import Swiper from 'swiper'
+import Swiper, { Navigation, Autoplay } from 'swiper'
 
 const burger = document.querySelector('.burger')
 const mobileMenu = document.querySelector('.mobile-menu')
@@ -46,12 +46,37 @@ if (btnClose && popup) {
 
 // .............slider.....................//
 
-var swiper = new Swiper('.my-swiper', {
+const swiper = new Swiper('.my-Swiper', {
+  modules: [Navigation, Autoplay],
+  slidesPerView: 1,
+  breakpoints: {
+    675: {
+      slidesPerView: 2,
+    },
+  },
+  spaceBetween: 50,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  autoplay: {
+    delay: 3000,
+  },
+  on: {
+    slideChange: e => {
+      document.querySelector('.reviews__counter').textContent = `${
+        e.activeIndex + 1
+      } / ${e.slides.length}`
+    },
+    // init: e => {
+    //   document.querySelector(
+    //     '.reviews__counter'
+    //   ).textContent = `1 / ${e.slides.length}`
+    // },
+  },
 })
+
+console.log(swiper)
 
 //................acordion...................//
 
