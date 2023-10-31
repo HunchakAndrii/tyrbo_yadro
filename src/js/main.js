@@ -52,7 +52,7 @@ const swiper = new Swiper('.my-Swiper', {
   modules: [Navigation, Autoplay],
   slidesPerView: 1,
   breakpoints: {
-    675: {
+    900: {
       slidesPerView: 2,
     },
   },
