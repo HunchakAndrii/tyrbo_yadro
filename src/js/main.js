@@ -1,4 +1,5 @@
-import Swiper, { Navigation, Autoplay } from 'swiper'
+import Swiper from 'swiper'
+import gsap from 'gsap'
 
 const burger = document.querySelector('.burger')
 const mobileMenu = document.querySelector('.mobile-menu')
@@ -47,7 +48,7 @@ if (btnClose && popup) {
 // .............slider.....................//
 
 const swiper = new Swiper('.my-Swiper', {
-  modules: [Navigation, Autoplay],
+  // modules: [Navigation, Autoplay],                //    Модуль навигации не работает   
   slidesPerView: 1,
   breakpoints: {
     675: {
@@ -113,24 +114,33 @@ document.addEventListener('DOMContentLoaded', function () {
   var titles = document.querySelectorAll('.accordion__item__title')
   var contents = document.querySelectorAll('.accordion__item__text')
 
-  titles.forEach(function (title, index) {
-    title.addEventListener('click', function (event) {
-      // Удаляем класс 'active' у всех заголовков
-      titles.forEach(function (otherTitle) {
-        otherTitle.classList.remove('active')
+  titles.forEach((title, index) => {
+    title.addEventListener('click', () => {
+      console.log(index)
+      
+      document.querySelectorAll('.accordion__item').forEach((item, i) => {
+        if (i === index) {
+          if (item.classList.contains('active')) {
+            item.classList.remove('active')
+            gsap.to(item.querySelector('.accordion__item__text'), {
+              height: 0,
+              // display: 'none'
+            })
+          } else {
+            item.classList.add('active')
+            gsap.to(item.querySelector('.accordion__item__text'), {
+              height: 'auto',
+              // display: 'block',
+            })
+          }
+        } else {
+          item.classList.remove('active')
+          gsap.to(item.querySelector('.accordion__item__text'), {
+            height: 0,
+            // display: 'none'
+          })
+        }
       })
-
-      // Добавляем класс 'active' к текущему заголовку
-      this.classList.toggle('active')
-
-      if (contents[index].style.display === 'block') {
-        contents[index].style.display = 'none'
-      } else {
-        contents.forEach(function (content) {
-          content.style.display = 'none'
-        })
-        contents[index].style.display = 'block'
-      }
     })
   })
 })

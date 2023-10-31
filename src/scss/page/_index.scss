@@ -529,6 +529,10 @@
   }
 }
 
+.accordion__item.active .accordion__item__title {
+  color: $orange;
+}
+
 .accordion__item__title::before {
   transform: rotate(40deg);
   right: 0px;
@@ -539,20 +543,26 @@
   right: 7px;
 }
 
-.accordion__item__title.active::before, 
-.accordion__item__title.active::after {
+.accordion__item.active .accordion__item__title::before, 
+.accordion__item.active .accordion__item__title::after {
   background-color: $orange;
 }
 
-.accordion__item__title.active::before {
+.accordion__item.active .accordion__item__title::before {
   transform: rotate(-40deg);
 }
 
-.accordion__item__title.active::after {
+.accordion__item.active .accordion__item__title::after {
   transform: rotate(40deg);
 }
 
 .accordion__item__text {
-  display: none;
-  padding-bottom: 20px;
+  display: block;
+  height: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.accordion__item.active .accordion__item__text {
+  // display: block;
 }
