@@ -78,52 +78,59 @@ const swiper = new Swiper('.my-Swiper', {
 
 console.log(swiper)
 
+
 //................acordion...................//
 
-// $(document).ready(function () {
-//   $('.accordion__item__title').click(function (even) {
-//     $(this).toggleClass('.active').next().slideToggle(300)
-//   })
-// })
+
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   var titles = document.querySelectorAll('.accordion__item__title')
+//   var contents = document.querySelectorAll('.accordion__item__text')
 
-//   titles.forEach(function (title) {
+//   titles.forEach(function (title, index) {
 //     title.addEventListener('click', function (event) {
-//       this.classList.toggle('active')
-//       var content = this.nextElementSibling
+//       // Удаляем класс 'active' у всех заголовков
+//       titles.forEach(function (otherTitle) {
+//         otherTitle.classList.remove('active')
+//       })
 
-//       if (content.style.display === 'block') {
-//         content.style.display = 'none'
+//       // Добавляем класс 'active' к текущему заголовку
+//       this.classList.toggle('active')
+
+//       if (contents[index].style.display === 'block') {
+//         contents[index].style.display = 'none'
 //       } else {
-//         content.style.display = 'block'
+//         contents.forEach(function (content) {
+//           content.style.display = 'none'
+//         })
+//         contents[index].style.display = 'block'
 //       }
 //     })
 //   })
 // })
 
-// document.querySelectorAll('.accordion__item__title').forEach((item) =>
-//   item.addEventListener('click', () => {
-//     const parent = item.parentNode;
+document.addEventListener('DOMContentLoaded', function () {
+  var titles = document.querySelectorAll('.accordion__item__title')
+  var contents = document.querySelectorAll('.accordion__item__text')
 
-//     if (parent.classList.contains('accordion__item--active')) {
-//       parent.classList.remove('accordion__item--active')
-//     } else {
-//       document
-//         .querySelectorAll('.accordion__item')
-//         .forEach((child) => child.classList.remove('accordion__item--active'))
+  titles.forEach(function (title, index) {
+    title.addEventListener('click', function (event) {
+      // Удаляем класс 'active' у всех заголовков
+      titles.forEach(function (otherTitle) {
+        otherTitle.classList.remove('active')
+      })
 
-//         parent.classList.add('accordion__item--active')
-//     }
-//   })
-// )
+      // Добавляем класс 'active' к текущему заголовку
+      this.classList.toggle('active')
 
-document.querySelectorAll('.accordion__item__title').forEach(el => {
-  el.addEventListener('click', () => {
-    let content = el.nextElementSibling
-    console.log('test1')
+      if (contents[index].style.display === 'block') {
+        contents[index].style.display = 'none'
+      } else {
+        contents.forEach(function (content) {
+          content.style.display = 'none'
+        })
+        contents[index].style.display = 'block'
+      }
+    })
   })
 })
-
-console.log('hfjkdshfvcsdl,kv')
