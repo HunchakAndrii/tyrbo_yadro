@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import { Navigation, Autoplay } from 'swiper/modules'
 import gsap from 'gsap'
 
 const burger = document.querySelector('.burger')
@@ -48,7 +49,7 @@ if (btnClose && popup) {
 // .............slider.....................//
 
 const swiper = new Swiper('.my-Swiper', {
-  // modules: [Navigation, Autoplay],                //    Модуль навигации не работает   
+  modules: [Navigation, Autoplay],
   slidesPerView: 1,
   breakpoints: {
     675: {
@@ -69,11 +70,11 @@ const swiper = new Swiper('.my-Swiper', {
         e.activeIndex + 1
       } / ${e.slides.length}`
     },
-    // init: e => {
-    //   document.querySelector(
-    //     '.reviews__counter'
-    //   ).textContent = `1 / ${e.slides.length}`
-    // },
+    init: e => {
+      document.querySelector(
+        '.reviews__counter'
+      ).textContent = `1 / ${e.slides.length}`
+    },
   },
 })
 
