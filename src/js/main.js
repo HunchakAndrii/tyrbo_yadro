@@ -11,6 +11,12 @@ if (burger) {
 
     burger.classList.toggle('active')
     mobileMenu.classList.toggle('active')
+
+    if (mobileMenu.classList.contains('active')) {
+      document.querySelector('body').style.overflow = 'hidden'
+    } else {
+      document.querySelector('body').style.overflow = ''
+    }
   })
 }
 
@@ -62,7 +68,7 @@ const swiper = new Swiper('.my-Swiper', {
     prevEl: '.swiper-button-prev',
   },
   autoplay: {
-    delay: 3000,
+    delay: 30000000,
   },
   on: {
     slideChange: e => {
